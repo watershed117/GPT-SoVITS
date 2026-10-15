@@ -1,3 +1,13 @@
+# --- 本地工作物（非官方仓库内容，勿提交）---
+_deliverytransfer/
+aligner_models/
+pretrained_models.zip
+_setup_log.txt
+_explain_tmp/
+conversation-*.txt
+GPT_SoVITS/text/ja_userdic/user.dict
+GPT_SoVITS/text/ja_userdic/userdict.md5
+
 .DS_Store
 .vscode
 __pycache__
