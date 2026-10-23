@@ -2,8 +2,8 @@
 
 > 2026-10-06 定稿；**2026-10-24 泛化清理**：删除旧项目（stage1）的一次性会话脚本与专属训练流程，只保留与项目无关的通用操作规范。
 > 适用场景：训练/实验跑在 Colab（付费 GPU 或免费 CPU），本地用 `colab-cli` 驱动。
-> 配套工具：仓库根目录 [`colab_ops/`](../colab_ops/)（6 个通用脚本：rclone 接入 ×2、DriveFS 挂载 ×2、SSH 隧道 ×1、Kaggle 多线程下载 ×1）。
-> 旧项目的训练监控页（`monitor_server.py`，解析特定日志格式）与启动/停训脚本已删，需要时从 git 历史（0845b1e）取。
+> 配套工具：仓库根目录 [`colab_ops/`](../colab_ops/)（通用：rclone 接入 ×2、DriveFS 挂载 ×2、SSH 隧道 ×1、Kaggle 多线程下载 ×1、**v6 训练监控页 ×1**：`monitor_v6.py`，解析 `_deliverytransfer/v6/train.py` 的 `log.jsonl`，本地/VM 通用）。
+> 旧项目的训练监控页（`monitor_server.py`，解析 stage1 文本日志）已删，需要时从 git 历史（0845b1e）取。
 
 ## 0. 三条原则（先记这三条，其余都是推论）
 
