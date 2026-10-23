@@ -1,0 +1,16 @@
+# colab_ops/ssh_config.stage1 —— stage1 会话的交互式 SSH / 端口转发配置
+# 用法：ssh -F colab_ops\ssh_config.stage1 colabmon
+#       ssh -F colab_ops\ssh_config.stage1 -N -L 8010:127.0.0.1:8000 colabmon   （已有 shell 时勿开第二条）
+# 说明：ProxyCommand 复用 colab-cli 的 WebSocket 桥，路径必须用正斜杠且不加引号
+#       （Windows OpenSSH 不认 shlex 的单引号/反斜杠，`colab ssh` 交互模式因此报
+#        CreateProcessW failed error:2）；同一条连接可挂多个 -L，一 runtime 只允许一条 SSH。
+Host colabmon
+  User root
+  HostName colab-runtime
+  IdentityFile C:/Users/water/.ssh/id_ed25519
+  StrictHostKeyChecking no
+  UserKnownHostsFile E:/watershed/Qwen3-TTS/.kaggle_stage/colab_monitor/_known_hosts
+  LogLevel ERROR
+  ServerAliveInterval 30
+  ServerAliveCountMax 3
+  ProxyCommand E:/watershed/Qwen3-TTS/.venv/Scripts/python.exe -m colab_cli.cli ssh --proxy-mode -s stage1
