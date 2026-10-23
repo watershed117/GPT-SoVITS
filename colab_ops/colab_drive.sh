@@ -12,8 +12,8 @@
 #   bash colab_drive.sh umount
 #   bash colab_drive.sh status                  挂载点/日志/配额一览
 #   bash colab_drive.sh verify                  写+读一个测试文件（端到端）
-#   bash colab_drive.sh push <本地文件> <远端路径>     例：push /content/stage1_out/ckpt.pt stage1_ckpt/ckpt.pt
-#   bash colab_drive.sh pull <远端路径> <本地目录>     例：pull stage1_run/drive_data/stage1_data.zip /content
+#   bash colab_drive.sh push <本地文件> <远端路径>     例：push /content/out/ckpt.pt backup/ckpt.pt
+#   bash colab_drive.sh pull <远端路径> <本地目录>     例：pull backup/data.zip /content
 #   bash colab_drive.sh ls [远端路径]
 #
 # 远端根 = 你的「我的云端硬盘」内容（rclone 语义：根就是 My Drive 里那一层，没有 MyDrive/ 一级；

@@ -13,7 +13,7 @@
 
 .EXAMPLE
   powershell -ExecutionPolicy Bypass -File tunnel.ps1 -Session monitordemo -LocalPort 8010
-  powershell -ExecutionPolicy Bypass -File tunnel.ps1 -Session stage1 -LocalPort 8010 -RemotePort 8000
+  powershell -ExecutionPolicy Bypass -File tunnel.ps1 -Session work -LocalPort 8010 -RemotePort 8000
 #>
 [CmdletBinding()]
 param(
