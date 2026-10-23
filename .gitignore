@@ -7,6 +7,11 @@ _explain_tmp/
 conversation-*.txt
 GPT_SoVITS/text/ja_userdic/user.dict
 GPT_SoVITS/text/ja_userdic/userdict.md5
+_aclfix_reports/
+node_modules/
+package.json
+package-lock.json
+colab_ops/_oauth_url.txt
 
 .DS_Store
 .vscode
